@@ -8,12 +8,12 @@ pipeline {
         }
         stage('Build') {
             steps {
-                sh 'python main.py'
+                sh 'python -m main.py'
             }
         }
         stage('Test') {
             steps {
-               sh 'python unittest discover'
+               sh 'python -m unittest discover'
             }
         }
     }
